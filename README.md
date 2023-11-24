@@ -3,8 +3,9 @@
 Simple Graph API architecture template using Dapper ORM for .NET 8.
 Ideal if you need to set up an Graph API on a existing database. Just install and use the template and start adding queries and mutations.
 
-## Dependencies
+## Technologies
 
+- .NET 8
 - Dapper
 - HotChocolate
 - Bindicate
@@ -31,3 +32,24 @@ The complete solution will be scaffolded inside your folder. Open it in Visual S
 
 Update the `connectionString` in `appsettings.json` and remove the `Seed` folder in the `Infrastructure` project.
 
+## Overview
+
+**Domain**
+
+This will contain all entities, enums, exceptions, interfaces, types and logic specific to the domain layer.
+
+**Application**
+
+This layer contains all application logic. It is dependent on the domain layer, but has no dependencies on any other layer or project. This layer defines interfaces that are implemented by outside layers. For example, if the application need to access a notification service, a new interface would be added to application and an implementation would be created within infrastructure.
+
+**Infrastructure**
+
+This layer contains classes for accessing external resources. These classes should be based on interfaces defined within the application layer.
+
+**Core**
+
+This layer contains core logic that is not bound to the domain. For example, our own handler implementation is located there.
+
+**API**
+
+This layer is a web api application based on ASP.NET 8. This layer depends on both the Application and Infrastructure layers, however, the dependency on Infrastructure is only to support dependency injection. Therefore only `program.cs` should reference Infrastructure.
