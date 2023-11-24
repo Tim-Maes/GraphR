@@ -27,7 +27,7 @@ The complete solution will be scaffolded inside your folder. Open it in Visual S
 
 ![image](https://github.com/Tim-Maes/GraphR/assets/91606949/9f977670-cddb-48c6-8b4c-eb83c496845f)
 
+## Setup
 
-
-
+Update the `connectionString` in `appsettings.json` and remove the `Seed` folder in the `Infrastructure` project.
 
