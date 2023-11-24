@@ -5,10 +5,10 @@ Ideal if you need to set up an Graph API on a existing database. Just install an
 
 ## Technologies
 
-- .NET 8
-- Dapper
-- HotChocolate
-- Bindicate
+- [.NET 8](https://github.com/dotnet/core)
+- [Dapper](https://github.com/DapperLib/Dapper)
+- [HotChocolate](https://github.com/ChilliCream/graphql-platform)
+- [Bindicate](https://github.com/Tim-Maes/Bindicate)
 
 ## Usage
 
