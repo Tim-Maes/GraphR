@@ -23,6 +23,11 @@ Create a folder, for example 'MyNewSolution' and run this command inside the fol
 ```bash
 dotnet new graphr -n MyNewSolution
 ```
-The complete solution will be scaffolded inside your folder.
+The complete solution will be scaffolded inside your folder. Open it in Visual Studio:
+
+![image](https://github.com/Tim-Maes/GraphR/assets/91606949/9f977670-cddb-48c6-8b4c-eb83c496845f)
+
+
+
 
 
