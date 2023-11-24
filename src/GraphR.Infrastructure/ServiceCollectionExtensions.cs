@@ -1,0 +1,21 @@
+using System.Reflection;
+using Bindicate.Configuration;
+using GrapR.Infrastructure.Database.Seed;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace GrapR.Infrastructure;
+
+public static class ServiceCollectionExtensions
+{
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddAutowiringForAssembly(Assembly.GetExecutingAssembly())
+            .WithOptions(configuration)
+            .Register();
+
+        services.AddHostedService<DbUpgraderBackgroundService>();
+
+        return services;
+    }
+}
