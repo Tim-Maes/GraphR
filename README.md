@@ -1,4 +1,4 @@
-# GraphR - GraphAPI solution template 
+# Clean Architecture GraphAPI solution template 
 
 Simple Graph API architecture template using Dapper ORM for .NET 8.
 Ideal if you need to set up an Graph API on a existing database. Just install and use the template and start adding queries and mutations.
