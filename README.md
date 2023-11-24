@@ -9,9 +9,20 @@ Ideal if you need to set up an Graph API on a existing database. Just install an
 - HotChocolate
 - Bindicate
 
-TODO:
+## Usage
 
-- Extend with some more examples
-- Support for DB Schema
-- Review
-- Create parameterized solution template
+**Install GraphR**
+
+```bash
+dotnet new --install GraphR
+```
+
+**Scaffold your solution**
+Create a folder, for example 'MyNewSolution' and run this command inside the folder:
+
+```bash
+dotnet new graphr -n MyNewSolution
+```
+The complete solution will be scaffolded inside your folder.
+
+
