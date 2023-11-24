@@ -31,6 +31,7 @@ The complete solution will be scaffolded inside your folder. Open it in Visual S
 ## Setup
 
 Update the `connectionString` in `appsettings.json` and remove the `Seed` folder in the `Infrastructure` project.
+Remove the example queries/mutation/repositories and implement your own.
 
 ## Overview
 
