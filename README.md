@@ -19,6 +19,8 @@ dotnet new --install GraphR
 ```
 
 **Scaffold your solution**
+
+
 Create a folder, for example 'MyNewSolution' and run this command inside the folder:
 
 ```bash
