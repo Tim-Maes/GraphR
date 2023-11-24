@@ -28,7 +28,8 @@ dotnet new graphr -n MyNewSolution
 ```
 The complete solution will be scaffolded inside your folder. Open it in Visual Studio:
 
-![image](https://github.com/Tim-Maes/GraphR/assets/91606949/9f977670-cddb-48c6-8b4c-eb83c496845f)
+![image](https://github.com/Tim-Maes/GraphR/assets/91606949/297e227a-4b55-44e0-ab92-4aa3dc5e7558)
+
 
 ## Setup
 
