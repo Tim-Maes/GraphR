@@ -1,10 +1,12 @@
-# .NET 8 WebAPI solution template with clean architecture.
+# GraphR - GraphAPI solution template 
 
-Simple WebAPI template using Dapper ORM. Ideal if you need to set up an REST API on a existing database. Just install and use the template and start adding queries.
+Simple Graph API architecture template using Dapper ORM for .NET 8.
+Ideal if you need to set up an Graph API on a existing database. Just install and use the template and start adding queries and mutations.
 
 ## Dependencies
 
 - Dapper
+- HotChocolate
 - Bindicate
 
 TODO:
