@@ -1,10 +1,11 @@
+using GraphR.Application.Books.GraphApi.Types.Output;
 using GrapR.Domain.Models;
 
-namespace GrapR.Application.Dto.Mappings;
+namespace GraphR.Application.Books.Mappings;
 
 internal static class BookMapping
 {
-    internal static BookDto ToDto(this Book book)
+    internal static BookDto ToOutput(this Book book)
         => new BookDto
         {
             Id = book.Id,

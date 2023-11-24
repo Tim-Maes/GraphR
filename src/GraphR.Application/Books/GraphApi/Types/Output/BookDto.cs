@@ -1,4 +1,4 @@
-namespace GrapR.Application.Dto;
+namespace GraphR.Application.Books.GraphApi.Types.Output;
 
 public sealed class BookDto
 {

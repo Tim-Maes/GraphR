@@ -1,4 +1,4 @@
-using GrapR.API.GraphApi.Query;
+using GraphR.API.GraphApi;
 using GrapR.WebAPI;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +8,8 @@ var configuration = builder.Configuration;
 builder.Services.AddSolutionComponents(configuration);
 
 builder.Services.AddGraphQLServer()
-    .AddQueryType<Query>();
+    .AddQueryType<Query>()
+    .AddMutationType<Mutation>();
 
 builder.Services.AddControllers();
 

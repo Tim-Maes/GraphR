@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="GraphApi\Mutation\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GraphR.Application\GraphR.Application.csproj" />
     <ProjectReference Include="..\GraphR.Core\GraphR.Core.csproj" />
     <ProjectReference Include="..\GraphR.Infrastructure\GraphR.Infrastructure.csproj" />

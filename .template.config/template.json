@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Tim Maes",
+  "classifications": [ "Web", "API", "GraphQL", "Dapper" ],
+  "identity": "GraphR.Template",
+  "name": "GraphR Graph API Template",
+  "shortName": "graphr",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "GraphR",
+  "symbols": {
+    "NAMESPACE": {
+      "type": "parameter",
+      "replaces": "GraphR",
+      "defaultValue": "GraphR"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 using GrapR.Domain.Models;
 using Dapper.FluentMap.Mapping;
 
-namespace GrapR.Application.Maps;
+namespace GraphR.Application.Books.GraphApi.Types.Maps;
 
 internal class BookMap : EntityMap<Book>
 {

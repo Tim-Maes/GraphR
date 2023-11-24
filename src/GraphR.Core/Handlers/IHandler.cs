@@ -5,7 +5,7 @@ public interface IHandler<TResult>
     Task<TResult> Handle();
 }
 
-public interface IHandler<IRequest, TResult>
+public interface IHandler<TInput, TResult>
 {
-    Task<TResult> Handle(IRequest request);
+    Task<TResult> Handle(TInput input);
 }
