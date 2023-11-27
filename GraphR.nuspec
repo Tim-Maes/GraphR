@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>GraphR</id>
+    <version>0.1.5</version>
+    <authors>Tim Maes</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/Tim-Maes/GraphR</projectUrl>
+    <repository type="git" url="https://github.com/Tim-Maes/GraphR" branch="master" />
+    <description>Solution template for GraphAPI with Dapper</description>
+    <copyright>$copyright$</copyright>
+    <tags>dotnet-core graph api csharp dapper template</tags>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+    <readme>README.md</readme>
+  </metadata>
+  <files>
+  <file src="README.md" />
+    <file src="**" exclude="**\bin\**\*;**\obj\**\*;**\*.user;**\*.lock.json;**\.DS_Store;**\.git\**\*;**\.github\**\*;**\.vs\**\*;**\*LICENSE;**\*.gitattributes;**\*.gitignore;**\*nuget.config;" target="/content" />
+  </files>
+</package>
