@@ -1,7 +1,7 @@
-using GraphR.Application.Books.GraphApi.Types.Output;
+using GraphR.Application.Books.Types.Output;
 using GrapR.Domain.Models;
 
-namespace GraphR.Application.Books.Mappings;
+namespace GraphR.Application.Books.Types.Mappings;
 
 internal static class BookMapping
 {

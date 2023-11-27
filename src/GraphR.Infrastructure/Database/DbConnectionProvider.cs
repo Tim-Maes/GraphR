@@ -10,7 +10,7 @@ public class DbConnectionProvider : IDbConnectionProvider
 {
     private readonly string _connectionString;
 
-    public DbConnectionProvider(IOptions<PersistanceOptions> options)
+    public DbConnectionProvider(IOptions<InfrastructureOptions> options)
     {
         _connectionString = options.Value.ConnectionString;
     }

@@ -1,9 +1,9 @@
-using GraphR.Application.Books.GraphApi.Handlers.Query;
-using GraphR.Application.Books.GraphApi.Types.Input;
-using GraphR.Application.Books.GraphApi.Types.Output;
+using GraphR.Application.Books.Handlers.Query;
+using GraphR.Application.Books.Types.Input;
+using GraphR.Application.Books.Types.Output;
 using HotChocolate;
 
-namespace GraphR.Application.Books.GraphApi;
+namespace GraphR.Application.Books;
 
 public sealed class BooksQuery
 {

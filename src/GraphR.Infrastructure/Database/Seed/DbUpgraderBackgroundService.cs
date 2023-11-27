@@ -8,7 +8,7 @@ public class DbUpgraderBackgroundService : BackgroundService
 {
     readonly string _connectionString;
 
-    public DbUpgraderBackgroundService(IOptions<PersistanceOptions> options) =>
+    public DbUpgraderBackgroundService(IOptions<InfrastructureOptions> options) =>
         _connectionString = options.Value.ConnectionString;
 
     protected override Task ExecuteAsync(CancellationToken stoppingToken)

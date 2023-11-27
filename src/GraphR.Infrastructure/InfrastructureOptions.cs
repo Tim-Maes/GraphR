@@ -3,7 +3,7 @@ using Bindicate.Attributes.Options;
 namespace GrapR.Infrastructure;
 
 [RegisterOptions("Connections")]
-public class PersistanceOptions
+public class InfrastructureOptions
 {
     public string ConnectionString { get; set; } = "";
 

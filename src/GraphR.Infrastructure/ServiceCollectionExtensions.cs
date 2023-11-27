@@ -1,5 +1,6 @@
 using System.Reflection;
 using Bindicate.Configuration;
+using GrapR.Core.Dapper;
 using GrapR.Infrastructure.Database.Seed;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,6 +14,8 @@ public static class ServiceCollectionExtensions
         services.AddAutowiringForAssembly(Assembly.GetExecutingAssembly())
             .WithOptions(configuration)
             .Register();
+
+        services.AddDapperFluentMappingsInAssembly();
 
         services.AddHostedService<DbUpgraderBackgroundService>();
 

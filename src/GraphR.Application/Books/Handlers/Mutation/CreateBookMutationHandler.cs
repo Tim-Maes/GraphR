@@ -1,10 +1,10 @@
 using FluentValidation;
-using GraphR.Application.Books.GraphApi.Types.Input;
+using GraphR.Application.Books.Types.Input;
 using GrapR.Core.Handlers;
 using GrapR.Domain.Enums;
 using GrapR.Domain.Interfaces;
 
-namespace GraphR.Application.Books.GraphApi.Handlers.Mutation;
+namespace GraphR.Application.Books.Handlers.Mutation;
 
 internal class CreateBookMutationHandler : Handler<CreateBookParameters, int>,
     ICreateBookMutationHandler

@@ -1,4 +1,4 @@
-namespace GraphR.Application.Books.GraphApi.Types.Input;
+namespace GraphR.Application.Books.Types.Input;
 public sealed class CreateBookParameters
 {
     public string Title { get; set; }

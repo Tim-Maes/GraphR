@@ -1,11 +1,11 @@
 using GrapR.Core.Handlers;
 using GrapR.Domain.Interfaces;
 using FluentValidation;
-using GraphR.Application.Books.Mappings;
-using GraphR.Application.Books.GraphApi.Types.Input;
-using GraphR.Application.Books.GraphApi.Types.Output;
+using GraphR.Application.Books.Types.Input;
+using GraphR.Application.Books.Types.Output;
+using GraphR.Application.Books.Types.Mappings;
 
-namespace GraphR.Application.Books.GraphApi.Handlers.Query;
+namespace GraphR.Application.Books.Handlers.Query;
 
 internal sealed class GetBookByIdQueryHandler : Handler<GetBookByIdParameters, BookDto>, IGetBookByIdHandler
 {

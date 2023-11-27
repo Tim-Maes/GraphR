@@ -5,6 +5,7 @@ using Dapper.FluentMap.Mapping;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace GrapR.Core.Dapper;
+
 public static class DapperMappingServiceCollectionExtensions
 {
     public static IServiceCollection AddDapperFluentMappingsInAssembly(this IServiceCollection services)

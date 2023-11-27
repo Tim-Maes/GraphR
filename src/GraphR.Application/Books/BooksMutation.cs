@@ -1,8 +1,8 @@
-using GraphR.Application.Books.GraphApi.Handlers.Mutation;
-using GraphR.Application.Books.GraphApi.Types.Input;
+using GraphR.Application.Books.Handlers.Mutation;
+using GraphR.Application.Books.Types.Input;
 using HotChocolate;
 
-namespace GraphR.Application.Books.GraphApi;
+namespace GraphR.Application.Books;
 
 public sealed class BooksMutation
 {
