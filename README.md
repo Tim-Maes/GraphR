@@ -50,8 +50,10 @@ This layer contains all application logic and it depends only on the Domain and 
 This will contain all models, enums, exceptions, interfaces, types and logic specific to the domain layer. This project references no other project.
 
 **Infrastructure**
+
 In this layer we implement the data access (repositories, Dapper implementation,..) and possibly classes to access other external resources. These classes should be based on interfaces defined within the application layer. 
 
 **Core**
+
 This project holds some core logic that we need in our solution. In the template, we have logic that wires up handlers and dapper mappings to the `ServiceCollection`.
 
