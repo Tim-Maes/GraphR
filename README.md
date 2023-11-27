@@ -57,3 +57,6 @@ In this layer we implement the data access (repositories, Dapper implementation,
 
 This project holds some core logic that we need in our solution. In the template, we have logic that wires up handlers and dapper mappings to the `ServiceCollection`.
 
+## Autowiring
+
+This project uses the `Bindicate` library to autowire dependencies by using attributes, so we don't bloat the `ServiceCollectionExtensions`.
