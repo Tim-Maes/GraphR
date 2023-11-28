@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HotChocolate.Abstractions" Version="13.7.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GraphR.Core\GraphR.Core.csproj" />
     <ProjectReference Include="..\GraphR.Domain\GraphR.Domain.csproj" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Authors\Handlers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="HotChocolate.Abstractions" Version="13.7.0" />
   </ItemGroup>
 
 </Project>

@@ -7,5 +7,7 @@ public interface IBookRepository
 {
     Task<Book> GetById(int id);
 
+    Task<Book[]> GetByAuthorId(int authorId);
+
     Task Create(string title, string description, Category category, int authorId);
 }

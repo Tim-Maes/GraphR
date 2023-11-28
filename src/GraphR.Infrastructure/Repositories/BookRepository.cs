@@ -39,6 +39,27 @@ public class BookRepository : IBookRepository
         }
     }
 
+    public async Task<Book[]> GetByAuthorId(int authorId)
+    {
+        var query =
+            """
+            SELECT Id, Title, Description, CategoryId, AuthorId
+              FROM dbo.Book
+             WHERE AuthorID = @AuthorId
+            """;
+
+        var parameters = new DynamicParameters();
+        parameters.Add("AuthorId", authorId);
+
+        using (var connection = _dbConnectionProvider.CreateConnection())
+        {
+            return (await connection.QueryAsync<Book>(
+                sql: query,
+                param: parameters)).ToArray();
+        }
+
+    }
+
     public async Task Create(string title, string description, Category category, int authorId)
     {
         var query =

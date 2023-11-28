@@ -37,5 +37,11 @@ GO
 INSERT INTO Book (Title, Description, CategoryID, AuthorID) VALUES
 ('Book Title One', 'Description of Book One', 1, 1),
 ('Book Title Two', 'Description of Book Two', 2, 2),
-('Book Title Three', 'Description of Book Three', 3, 3);
+('Book Title Three', 'Description of Book Three', 3, 3),
+('Book Title Four', 'Description of Book Four', 1, 1), 
+('Book Title Five', 'Description of Book Five', 2, 1), 
+('Book Title Six', 'Description of Book Six', 3, 2),  
+('Book Title Seven', 'Description of Book Seven', 1, 2), 
+('Book Title Eight', 'Description of Book Eight', 2, 3);
+
 GO
