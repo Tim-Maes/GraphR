@@ -55,7 +55,7 @@ In this layer we implement the data access (repositories, Dapper implementation,
 
 **Core**
 
-This project holds some core logic that we need in our solution. In the template, we have logic that wires up handlers and dapper mappings to the `ServiceCollection`.
+This project holds some core logic that we need in our solution. In the template, we have logic that wires up the custom handler system.
 
 ## Autowiring
 
