@@ -20,7 +20,7 @@ jobs:
       - uses: nuget/setup-nuget@v1
         name: Setup NuGet
         with:
-          nuget-version: '8.x'
+          nuget-version: '6.x'
 
       - name: Create the package
         run: nuget pack GraphR.nuspec -NoDefaultExcludes
