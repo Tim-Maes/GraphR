@@ -41,23 +41,23 @@ Remove the example queries/mutation/repositories etc and implement your own.
 
 ## Architecture overview
 
-**WebApi**
+### WebApi
 
 A .NET 8 WebAPI application, here we have our GraphAPI endpoint. This application depends on the Application layer, and it also has a reference to the Infrastructure layer to wire up the IoC container (dependency injection), so we only use it in the `ServiceCollectionExtensions`.
 
-**Application**
+### Application
 
 This layer contains all application logic and it depends only on the Domain and Core layer. Here we implement the handlers, graphApi input and output types, queries and mutations. This project depends on the Domain and the Core project.
 
-**Domain**
+### Domain
 
 This will contain all models, enums, exceptions, interfaces, types and logic specific to the domain layer. This project references no other project.
 
-**Infrastructure**
+### Infrastructure
 
 In this layer we implement the data access (repositories, Dapper implementation, EntityMaps..) and possibly classes to access other external resources. These classes should be based on interfaces defined within the application layer. 
 
-**Core**
+### Core
 
 This project holds some core logic that we need in our solution. In the template, we have logic that wires up the custom handler system.
 
