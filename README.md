@@ -70,6 +70,10 @@ This project uses the `Bindicate` library to autowire dependencies by using attr
 
 Build and run the project, and navigate to <localhost>/graphql, this will take you to the Banana Cake Pop playground where you can find the graphql schema:
 
+![image](https://github.com/Tim-Maes/GraphR/assets/91606949/5b8bdfb1-74fc-4e54-a8a9-e72cacd4845c)
 
 You can play around in the Banana Cake Pop playground and test out a query.
+
 For example:
+
+![image](https://github.com/Tim-Maes/GraphR/assets/91606949/57b26947-86e0-4c5f-b74a-ea92520b7d31)
