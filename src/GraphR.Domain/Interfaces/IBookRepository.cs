@@ -1,5 +1,5 @@
-using GrapR.Domain.Enums;
-using GrapR.Domain.Models;
+using GraphR.Domain.Entities;
+using GraphR.Domain.Enums;
 
 namespace GrapR.Domain.Interfaces;
 

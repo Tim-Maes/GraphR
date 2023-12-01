@@ -1,4 +1,4 @@
-namespace GrapR.Domain.Models;
+namespace GraphR.Domain.Entities;
 
 public sealed class Author
 {

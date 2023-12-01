@@ -1,5 +1,5 @@
 using GraphR.Application.Books.Types.Output;
-using GrapR.Domain.Models;
+using GraphR.Domain.Entities;
 
 namespace GraphR.Application.Books.Types.Mappings;
 

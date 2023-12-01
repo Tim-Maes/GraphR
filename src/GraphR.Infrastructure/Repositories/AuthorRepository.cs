@@ -1,8 +1,8 @@
 using Bindicate.Attributes;
 using Dapper;
+using GraphR.Domain.Entities;
 using GraphR.Domain.Exceptions;
 using GraphR.Domain.Interfaces;
-using GrapR.Domain.Models;
 using GrapR.Infrastructure.Database;
 
 namespace GrapR.Infrastructure.Repositories;
@@ -15,6 +15,22 @@ public class AuthorRepository : IAuthorRepository
     public AuthorRepository(IDbConnectionProvider dbConnectionProvider)
     {
         _dbConnectionProvider = dbConnectionProvider;
+    }
+
+    public async Task<Author[]> GetAll()
+    {
+
+        var query =
+            """
+            SELECT Name, Biography
+              FROM dbo.Author
+            """;
+
+        using (var connection = _dbConnectionProvider.CreateConnection())
+        {
+            return (await connection.QueryAsync<Author>(
+                sql: query)).ToArray();
+        }
     }
 
     public async Task<Author> GetById(int id)

@@ -9,4 +9,6 @@ public sealed class AuthorsQuery
 {
     public async Task<AuthorDto> Author([Service] IGetAuthorByIdHandler handler, AuthorParameters parameters)
         => await handler.Handle(parameters);
+
+    public async Task<AuthorDto[]> Authors([Service] IGetAuthorsQueryHandler handler) => await handler.Handle();
 }

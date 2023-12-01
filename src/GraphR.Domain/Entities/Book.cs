@@ -1,6 +1,6 @@
-using GrapR.Domain.Enums;
+using GraphR.Domain.Enums;
 
-namespace GrapR.Domain.Models;
+namespace GraphR.Domain.Entities;
 
 public sealed class Book
 {

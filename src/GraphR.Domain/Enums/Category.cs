@@ -1,4 +1,4 @@
-namespace GrapR.Domain.Enums;
+namespace GraphR.Domain.Enums;
 
 public enum Category
 {
