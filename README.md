@@ -48,7 +48,7 @@ A .NET 8 WebAPI application, here we have our GraphAPI endpoint. This applicatio
 
 ### Application
 
-This layer contains all application logic and it depends only on the Domain and Core layer. Here we implement the handlers, graphApi input and output types, queries and mutations. This project depends on the Domain and the Core project.
+This layer contains all application logic and it depends only on the Domain and Core layer. Here we implement the handlers, graphApi input and output types, queries and mutations.
 
 ### Domain
 
@@ -60,7 +60,7 @@ In this layer we implement the data access (repositories, Dapper implementation,
 
 ### Core
 
-This project holds some core logic that we need in our solution. In the template, we have logic that wires up the custom handler system.
+This project holds some core logic that we need in our solution. In the template, we have logic that wires up the custom handler system and the method to register Dapper `IEntityMap<T>` registrations.
 
 ## Autowiring
 
