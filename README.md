@@ -10,6 +10,7 @@ Ideal if you need to set up an Graph API on a existing database. Just install an
 - [.NET 8](https://github.com/dotnet/core)
 - [Dapper](https://github.com/DapperLib/Dapper)
 - [HotChocolate](https://github.com/ChilliCream/graphql-platform)
+- [FluentValidation](https://github.com/FluentValidation/FluentValidation)
 - [Bindicate](https://github.com/Tim-Maes/Bindicate)
 
 ## Give it a star! :star:
