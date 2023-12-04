@@ -88,7 +88,7 @@ This is an example of how your GraphApi application layer could be structured
 
 ## Database
 
-Currently supports a `DbConnectionProvider` for a single SQL database connection.
+Currently supports a `DbConnectionProvider` for a single SQL database connection. Inject the `IDbConnectionProvider` in your repositories.
 
 ### Transactions
 
