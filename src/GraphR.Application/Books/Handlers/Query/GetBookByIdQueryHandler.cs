@@ -25,6 +25,4 @@ internal sealed class GetBookByIdQueryHandler : Handler<GetBookByIdParameters, B
         => (await _bookRepository.GetById(request.Id)).ToOutput();
 }
 
-public interface IGetBookByIdHandler : IHandler<GetBookByIdParameters, BookDto>
-{
-}
+public interface IGetBookByIdHandler : IHandler<GetBookByIdParameters, BookDto> { }
