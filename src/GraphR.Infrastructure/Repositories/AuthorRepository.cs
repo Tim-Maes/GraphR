@@ -2,7 +2,7 @@ using Bindicate.Attributes;
 using Dapper;
 using GraphR.Domain.Entities;
 using GraphR.Domain.Exceptions;
-using GraphR.Domain.Interfaces;
+using GraphR.Domain.Interfaces.Repositories;
 using GrapR.Infrastructure.Database;
 
 namespace GrapR.Infrastructure.Repositories;

@@ -1,8 +1,8 @@
 using FluentValidation;
 using GraphR.Application.Books.Types.Input;
 using GraphR.Domain.Enums;
+using GraphR.Domain.Interfaces.Repositories;
 using GrapR.Core.Handlers;
-using GrapR.Domain.Interfaces;
 
 namespace GraphR.Application.Books.Handlers.Mutation;
 

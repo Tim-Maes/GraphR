@@ -40,6 +40,107 @@ The complete solution will be scaffolded inside your folder. Open it in Visual S
 Replace the `connectionString` in `appsettings.json`  with your own and remove the `Seed` folder in the `Infrastructure` project.
 Remove the example queries/mutation/repositories etc and implement your own.
 
+## Implementing Mutation & Query
+
+In the core layer we have a custom lightweight handler implementation. These are `Handler<TOutput>` for querying data without parameters,
+and `Handler<TInput, TOutput>` for querying or mutating data with parameters.
+
+Since we don't use `AutoMapper` to map input types to output types, we just write an extension method `ToOutput()` that maps `TInput` to `ToOutput()`.
+
+`FluentValidation` is used to validate input parameter properties.
+
+### Example
+
+```csharp
+internal sealed class GetBookByIdQueryHandler : Handler<GetBookByIdParameters, BookDto>, IGetBookByIdHandler
+{
+    private readonly IBookRepository _bookRepository;
+
+    public GetBookByIdQueryHandler(IBookRepository bookRepository)
+    {
+        _bookRepository = bookRepository;
+    }
+
+    protected override void DefineRules()
+    {
+        RuleFor(x => x.Id).GreaterThan(0);
+    }
+
+    protected override async Task<BookDto> HandleValidatedRequest(GetBookByIdParameters request)
+        => (await _bookRepository.GetById(request.Id)).ToOutput();
+}
+
+public interface IGetBookByIdHandler : IHandler<GetBookByIdParameters, BookDto> { }
+```
+
+Inject the `IGetBookByIdQueryHandler` in your GraphApi query using the HotChocolate `[Service]` attribute, do the same for Mutations.
+
+```
+public sealed class BooksQuery
+{
+    public async Task<BookDto> Book([Service] IGetBookByIdHandler handler, GetBookByIdParameters parameters)
+        => await handler.Handle(parameters);
+}
+```
+
+This is an example of how your GraphApi application layer could be structured
+
+
+## Database
+
+Currently supports a `DbConnectionProvider` for a single SQL database connection. Inject the `IDbConnectionProvider` in your repositories.
+
+### Transactions
+
+In the domain folder there is a abstraction of the `DbTransaction` implementation. You can inject the `ITransaction` interface in a `MutationHandler` in your Application layer if you need to mutate data over multiple repositories.
+
+```csharp
+internal class ExampleMutationHandler : Handler<ExampleMutationParameters, Result>,
+    IExampleMutationHandler
+{
+    private readonly IRepository _repository;
+    private readonly ISecondRepository _secondRepository;
+    private readonly ITransaction _transaction;
+
+    public ExampleMutationHandler(
+        IRepository secondRepository,
+        ISecondRepository secondRepository,
+        ITransaction transaction)
+    {
+        _repository = repository;
+        _secondRepository = secondRepository;
+        _transaction = transaction;
+    }
+
+    protected override void DefineRules()
+    {
+        // FluentValidation RuleSet for your input
+    }
+
+    protected override async Task<Result> HandleValidatedRequest(ExampleMutationParameters input)
+    {
+        _transaction.Begin()
+        try
+        {
+            await _repository.Create(...);
+
+            await _secondRepository.UpdateSomething( ... );
+
+            _transaction.Commit();
+        }
+        catch
+        {
+            _transaction.RollBack();
+            throw;
+        }
+
+        return new Result(...);
+    }
+}
+
+public interface IExampleMutationHandler : IHandler<ExampleMutationParameters, Result> { }
+```
+
 ## Architecture overview
 
 ### WebApi
