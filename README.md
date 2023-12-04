@@ -1,11 +1,11 @@
-# Clean Architecture GraphAPI solution template 
+# Clean Architecture GraphAPI solution template :sunny:
 
 ## Description
 
 Simple Graph API solution template using Dapper ORM for .NET 8 with clean code, clean architecture and CQRS in mind..
 Ideal if you need to set up an Graph API on a existing database. Just install and use the template and start adding queries and mutations.
 
-## Technologies
+## Technologies 
 
 - [.NET 8](https://github.com/dotnet/core)
 - [Dapper](https://github.com/DapperLib/Dapper)
@@ -16,7 +16,7 @@ Ideal if you need to set up an Graph API on a existing database. Just install an
 ## Give it a star! :star:
 If you have used this template, learned something or like what you see, consider giving it a star!
 
-## Usage
+## Installation and Usage :wrench:
 
 **Install GraphR**
 
@@ -35,7 +35,7 @@ The complete solution will be scaffolded inside your folder. Open it in Visual S
 
 ![image](https://github.com/Tim-Maes/GraphR/assets/91606949/297e227a-4b55-44e0-ab92-4aa3dc5e7558)
 
-## Setup
+## Setup :hammer_and_wrench:
 
 Replace the `connectionString` in `appsettings.json`  with your own and remove the `Seed` folder in the `Infrastructure` project.
 Remove the example queries/mutation/repositories etc and implement your own.
@@ -75,7 +75,7 @@ public interface IGetBookByIdHandler : IHandler<GetBookByIdParameters, BookDto> 
 
 Inject the `IGetBookByIdQueryHandler` in your GraphApi query using the HotChocolate `[Service]` attribute, do the same for Mutations.
 
-```
+```csharp
 public sealed class BooksQuery
 {
     public async Task<BookDto> Book([Service] IGetBookByIdHandler handler, GetBookByIdParameters parameters)
@@ -84,9 +84,10 @@ public sealed class BooksQuery
 ```
 
 This is an example of how your GraphApi application layer could be structured
+![image](https://github.com/Tim-Maes/GraphR/assets/91606949/3384b79a-0b3e-4587-82a5-ffe579731715)
 
 
-## Database
+## Database :file_cabinet:
 
 Currently supports a `DbConnectionProvider` for a single SQL database connection. Inject the `IDbConnectionProvider` in your repositories.
 
@@ -141,7 +142,7 @@ internal class ExampleMutationHandler : Handler<ExampleMutationParameters, Resul
 public interface IExampleMutationHandler : IHandler<ExampleMutationParameters, Result> { }
 ```
 
-## Architecture overview
+## Architecture overview :spiral_notepad:
 
 ### WebApi
 
