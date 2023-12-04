@@ -5,23 +5,28 @@ using Microsoft.Extensions.Options;
 
 namespace GrapR.Infrastructure.Database;
 
-[AddSingleton(typeof(IDbConnectionProvider))]
+[AddTransient(typeof(IDbConnectionProvider))]
 public class DbConnectionProvider : IDbConnectionProvider
 {
-    private readonly string _connectionString;
+    private readonly IOptions<InfrastructureOptions> _options;
 
     public DbConnectionProvider(IOptions<InfrastructureOptions> options)
     {
-        _connectionString = options.Value.ConnectionString;
+        _options = options;
     }
 
     public IDbConnection CreateConnection()
     {
-        return new SqlConnection(_connectionString);
+        var connection = new SqlConnection(_options.Value.ConnectionString);
+        connection.Open();
+        return connection;
     }
+
+    public string Schema { get; }
 }
 
 public interface IDbConnectionProvider
 {
     IDbConnection CreateConnection();
+    string Schema { get; }
 }

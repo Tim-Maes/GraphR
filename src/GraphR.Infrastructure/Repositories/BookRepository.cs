@@ -1,10 +1,10 @@
 using Bindicate.Attributes;
 using GrapR.Domain.Exceptions;
-using GrapR.Domain.Interfaces;
 using GraphR.Domain.Entities;
 using GrapR.Infrastructure.Database;
 using Dapper;
 using GraphR.Domain.Enums;
+using GraphR.Domain.Interfaces.Repositories;
 
 namespace GrapR.Infrastructure.Repositories;
 

@@ -1,6 +1,6 @@
 using GraphR.Application.Authors.Types.Mappings;
 using GraphR.Application.Authors.Types.Output;
-using GraphR.Domain.Interfaces;
+using GraphR.Domain.Interfaces.Repositories;
 using GrapR.Core.Handlers;
 
 namespace GraphR.Application.Authors.Handlers;

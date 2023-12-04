@@ -1,7 +1,7 @@
 using GraphR.Domain.Entities;
 using GraphR.Domain.Enums;
 
-namespace GrapR.Domain.Interfaces;
+namespace GraphR.Domain.Interfaces.Repositories;
 
 public interface IBookRepository
 {
