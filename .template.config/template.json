@@ -16,5 +16,18 @@
       "replaces": "GraphR",
       "defaultValue": "GraphR"
     }
-  }
+  },
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**/*",
+        "*.nuspec"
+      ],
+      "rename": {
+        "README-template.md": "README.md"
+      }
+    }
+  ]
 }

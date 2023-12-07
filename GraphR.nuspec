@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>GraphR</id>
-    <version>0.1.8</version>
+    <version>0.1.9</version>
     <authors>Tim Maes</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
@@ -18,6 +18,6 @@
   </metadata>
   <files>
   <file src="README.md" />
-    <file src="**" exclude="**\bin\**\*;**\obj\**\*;**\*.user;**\*.lock.json;**\.DS_Store;**\.git\**\*;**\.github\**\*;**\.vs\**\*;**\*LICENSE;**\*.gitattributes;**\*.gitignore;**\*nuget.config;" target="/content" />
+    <file src="**" exclude="**\bin\**\*;**\obj\**\*;**\.git\**\*;**\.github\**\*;**\.vs\**\*;**\*LICENSE;**\*.gitattributes;**\*.gitignore;**\*nuget.config;.\LICENSE;.\README.md;" target="/content" />
   </files>
 </package>
