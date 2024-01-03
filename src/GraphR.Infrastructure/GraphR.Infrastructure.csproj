@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -16,11 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bindicate" Version="1.2.0" />
-    <PackageReference Include="Dapper" Version="2.1.21" />
+    <PackageReference Include="Bindicate" Version="1.5.1" />
+    <PackageReference Include="Dapper" Version="2.1.28" />
     <PackageReference Include="Dapper.FluentMap" Version="2.0.0" />
-    <PackageReference Include="dbup" Version="5.0.8" />
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="dbup" Version="5.0.37" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0-preview4.23342.2" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />

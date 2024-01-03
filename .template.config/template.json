@@ -23,7 +23,9 @@
       "target": "./",
       "exclude": [
         ".template.config/**/*",
-        "*.nuspec"
+        "*.nuspec",
+        "readme.md",
+        "template.json"
       ],
       "rename": {
         "README-template.md": "README.md"

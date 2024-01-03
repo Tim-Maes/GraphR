@@ -1,5 +1,5 @@
 using System.Reflection;
-using Bindicate.Configuration;
+using Bindicate;
 using GrapR.Core.Dapper;
 using GrapR.Infrastructure.Database.Seed;
 using Microsoft.Extensions.Configuration;
