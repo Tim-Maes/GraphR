@@ -44,7 +44,9 @@ Remove the example queries/mutation/repositories etc and implement your own.
 
 In the core layer we have a custom lightweight handler implementation. These are `Handler<TOutput>` for querying data without parameters,
 and `Handler<TInput, TOutput>` for querying or mutating data with parameters.
-Handler is a abstract class so we can leverage the validation method leveraging FluentValidation. You still need to define a interface for DI purpose.
+Handler is a abstract class so we can leverage the validation method leveraging FluentValidation.
+
+You still need to define a interface for dependency injection, the handlers are automatically registered as scoped.
 
 Since we don't use `AutoMapper` to map input types to output types, we just write an extension method `ToOutput()` that maps `TInput` to `ToOutput()`.
 
