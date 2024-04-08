@@ -9,4 +9,7 @@ public sealed class BooksQuery
 {
     public async Task<BookDto> Book([Service] IGetBookByIdHandler handler, GetBookByIdParameters parameters)
         => await handler.Handle(parameters);
+
+    public async Task<BookDto[]> BooksForAuthor([Service] IGetBooksForAuthorQueryHandler handler, GetBooksForAuthorParameters parameters)
+    => await handler.Handle(parameters);
 }

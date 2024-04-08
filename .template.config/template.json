@@ -24,7 +24,7 @@
       "exclude": [
         ".template.config/**/*",
         "*.nuspec",
-        "readme.md",
+        "README.md",
         "template.json"
       ],
       "rename": {

@@ -13,4 +13,7 @@ internal static class BookMapping
             Description = book.Description,
             Category = book.Category.ToString(),
         };
+
+    internal static BookDto[] ToOutput(this Book[] books)
+        => books.Select(ToOutput).ToArray();
 }
