@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>GraphR</id>
-    <version>0.2</version>
+    <version>0.2.2</version>
     <authors>Tim Maes</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
