@@ -25,6 +25,7 @@
         ".template.config/**/*",
         "*.nuspec",
         "README.md",
+        "LICENSE.txt",
         "template.json"
       ],
       "rename": {
